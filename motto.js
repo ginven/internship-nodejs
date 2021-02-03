@@ -37,6 +37,9 @@ motto(1)
 console.log('--With ES6 methods--'.green);
 
 const mottoTwo = house => {
+    if (houses.every(e => e.name !== house)) {
+        return console.log('There are no such house!'.red)
+      }
     houses.find(el => {
         if(el.name === house){
             return console.log(el.motto);
