@@ -1,12 +1,24 @@
-const colors = require('colors');
-const hashtag = '#';
+const colors = require('colors')
+
+const coloredHashtag = [
+    colors.green('#'),
+    colors.red('#'),
+    colors.blue('#'),
+    colors.yellow('#')
+]
+
+let previous;
 
 for(let i = 1; i < 8; i++) {
-    if (i % 3 === 0) {
-        console.log(hashtag.repeat(i).red);
-    } else if (i === 2 || i === 5) {
-        console.log(hashtag.repeat(i).green);
-    } else {
-        console.log(hashtag.repeat(i).yellow);
+    let randNum = Math.floor(Math.random() * 3)
+
+    if (randNum === previous) {
+        randNum = 3
     }
+
+    previous = randNum;
+
+    let randColor = coloredHashtag[randNum]
+    console.log(randColor.repeat(i));
+   
 }

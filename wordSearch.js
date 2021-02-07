@@ -1,10 +1,10 @@
 const colors = require('colors');
 
 const wordSearch = (w, text) => {
-    if(typeof w !== 'string' || typeof text !== 'string'){
+    if (typeof w !== 'string' || typeof text !== 'string') {
         return 'All variables must be strings'.red;
     }
-    if(text.toLowerCase().split(' ').indexOf(w.toLowerCase()) > -1) {
+    if (text.toLowerCase().split(' ').indexOf(w.toLowerCase()) > -1) {
         return `The word ${w} is present in the given text: ${text}`.green;
     } else {
         return `The word ${w} is not present in the given text: ${text}`.red;

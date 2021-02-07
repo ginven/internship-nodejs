@@ -4,11 +4,11 @@ const colors = require('colors');
 console.log('--Without ES6 methods--'.green);
 
 function range(x, y) {
-    if(x > y) {
+    if (x > y) {
         return console.log('First value must be less than or equal to second.'.red);
-    } 
+    }
     var arr = [];
-    for(var i = x; i < y; i++){
+    for (var i = x; i < y; i++) {
         arr.push(i);
     }
     console.log(arr);
@@ -24,11 +24,11 @@ console.log('--With ES6 methods--'.green);
 
 
 const rangeTwo = (x, y) => {
-    if(x > y) {
+    if (x > y) {
         return console.log('First value must be less than or equal to second.'.red);
     }
     let arr = [];
-    for(let i = x; i < y; i++){
+    for (let i = x; i < y; i++) {
         arr.push(i);
     }
     console.log(arr);
