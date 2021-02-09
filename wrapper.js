@@ -1,24 +1,22 @@
-let report = {
-    totalCalls: 0
-}
+let totalCalls = 0
 
 const spy = func => {
 
-    let wrapped = () => {
-        func()
-        report.totalCalls++
+    let wrapped = (num) => {
+        func(num)
+        totalCalls++
     }
 
     wrapped.report = function() {
-        return report
+        return {totalCalls}
     }
 
     return wrapped
 }
 
 
-const myFunction = () => {
-    console.log('I\'m a simple function');
+const myFunction = (num) => {
+    console.log('I\'m a simple function', num);
 }
 
 let spied = spy(myFunction);

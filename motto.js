@@ -16,6 +16,9 @@ var houses = [
 console.log('--Without ES6 methods--'.green);
 
 function motto(house) {
+    if (houses.filter(el => el.name === house).length === 0){
+        return console.log('There are no such house!'.red)
+    }
     for(var i = 0; i < houses.length; i++){
         if(houses[i].name === house){
             return console.log(houses[i].motto);

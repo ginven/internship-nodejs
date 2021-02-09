@@ -12,4 +12,4 @@ function removeDuplicates(arr) {
 
 removeDuplicates(1)
 removeDuplicates([1,2,3,5,5,2])
-removeDuplicates([1,2,3,'5',5,2,'a', 13, 'a'])
+removeDuplicates([1,2,3,'5',5,2,'a', 13,'a'])
